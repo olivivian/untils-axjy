@@ -1,20 +1,98 @@
-## 导航
+- [ 导航](#head1)
+- [ 使用方法](#head2)
+- [ 方法类](#head3)
+	- [ 根据pid生成树形结构](#head4)
+	- [ 根据时间生成树形结构](#head5)
+	- [ 寻找所有子节点](#head6)
+	- [ 修改数组里对象的key](#head7)
+	- [ 加减乘除](#head8)
+	- [根据对象里的属性 重构为数组](#head9)
+	- [ 根据对象的某个属性，找到数组里的对象](#head10)
+	- [树结构 根据id获取name](#head11)
+	- [ 字符串转对象](#head12)
+	- [ 数组对象值转对象](#head13)
+	- [ 二维数组全排列组合转一维数组](#head14)
+	- [ 数组|对象深拷贝](#head15)
+	- [ 数组对象去重](#head16)
+	- [ 替换指定位置的字符串](#head17)
+	- [ 数量排序](#head18)
+	- [ 函数节流](#head19)
+	- [ 函数防抖](#head20)
+	- [ 对象字符串的值转字符串](#head21)
+	- [ 去掉字符串最后的逗号](#head22)
+- [ 校验类](#head23)
+	- [ 判断对象指定属性是否存在](#head24)
+	- [ 比较两个数据类型是否相同](#head25)
+	- [ 是否为空](#head26)
+	- [ 是否是字符串](#head27)
+	- [ 是否是数组](#head28)
+	- [ 是否是对象](#head29)
+	- [ 是否是时间类型](#head30)
+	- [ 是否是数字](#head31)
+	- [ 是否是布尔值](#head32)
+	- [ 是否是方法](#head33)
+	- [ 邮箱校验](#head34)
+	- [ 手机号校验](#head35)
+	- [ 校验字符串是否是url](#head36)
+	- [ 检验输入框大于等于0](#head37)
+- [ 工具类](#head38)
+	- [ PC端判断](#head39)
+	- [ 数字格式化（给数字加逗号）](#head40)
+	- [ downFile文件下载](#head41)
+	- [ 生成随机数](#head42)
+	- [ 复制](#head43)
+	- [ loadScript](#head44)
+	- [ 历史记录](#head45)
+	- [ 防抖](#head46)
+	- [ 获取地址栏参数](#head47)
+	- [ base64转换为文件](#head48)
+	- [ 图片转换为base64](#head49)
+	- [ uuid生成唯一值](#head50)
+	- [ 生成一个hash字符串](#head51)
+	- [ 生成随机字符串](#head52)
+	- [ 大小写转换或首字母](#head53)
+	- [ 将阿拉伯数字翻译成中文的大写数字](#head54)
+	- [ 将数字转换为大写金额](#head55)
+	- [ 富文本代码块右上角显示复制按钮](#head56)
+	- [ 图片懒加载](#head57)
+	- [ 计算字符串长度（中英文）](#head58)
+	- [ 判断链接是否为本地](#head59)
+	- [ 获取当前url上的参数](#head60)
+	- [ 处理二进制流文件](#head61)
+- [ 时间类](#head62)
+	- [ 获取当前周几](#head63)
+	- [ 时间问候语](#head64)
+	- [ Date时间转数字](#head65)
+	- [ Date时间转汉字](#head66)
+	- [ 获取某月有多少天](#head67)
+	- [ 获取某年的第一天](#head68)
+	- [ 获取某年最后一天](#head69)
+	- [ 获取某个日期是当年中的第几天](#head70)
+	- [ 获取某个日期在这一年的第几周](#head71)
+	- [ 把秒转化为天小时分钟秒](#head72)
+- [ DOM类](#head73)
+	- [ 获取元素](#head74)
+	- [ 跳转到某个元素](#head75)
+	- [ 切换元素](#head76)
+	- [ 获取兄弟节点](#head77)
+	- [ 判断是否存在Class](#head78)
+	- [ 添加Class](#head79)
+	- [ 删除Class](#head80)
+	- [ 创建a标签打开新页面](#head81)
+## <span id="head1"> 导航</span>
 
-[TOC]
 
-
-
-## 使用方法
+## <span id="head2"> 使用方法</span>
 
 ```
 import { 方法名称 } from "@/utils";
 ```
 
-## 方法类
+## <span id="head3"> 方法类</span>
 
 > 包含了数组、字符串、对象的操作方法
 
-### 根据pid生成树形结构
+### <span id="head4"> 根据pid生成树形结构</span>
 
 ```js
 /**
@@ -28,7 +106,7 @@ export const createTree = (items, id = null, link = 'pid') =>{
 };
 ```
 
-### 根据时间生成树形结构
+### <span id="head5"> 根据时间生成树形结构</span>
 
 ```js
 // 原始数据
@@ -70,7 +148,7 @@ export function timeTree(data) {
 }
 ```
 
-### 寻找所有子节点
+### <span id="head6"> 寻找所有子节点</span>
 
 ```js
 /**
@@ -96,7 +174,7 @@ export function traceChildNode(id, data, pidName = 'parentId', idName = 'id', ch
 
 
 
-### 修改数组里对象的key
+### <span id="head7"> 修改数组里对象的key</span>
 
 别名：修改数组里对象的键名
 
@@ -120,7 +198,7 @@ export function convertKey(arr) {
 }
 ```
 
-### 加减乘除
+### <span id="head8"> 加减乘除</span>
 
 > 解决精度丢失问题
 
@@ -195,7 +273,7 @@ export function division(num1,num2){
 
 
 
-### 根据对象里的属性 重构为数组
+### <span id="head9">根据对象里的属性 重构为数组</span>
 
 ```
 
@@ -224,7 +302,7 @@ export const objToArr = (objArr, field) => {
 
 
 
-### 根据对象的某个属性，找到数组里的对象
+### <span id="head10"> 根据对象的某个属性，找到数组里的对象</span>
 
 ```js
   let objArr = [{"id":1,"name":"a"},{"id":2,"name":"b"}]
@@ -256,7 +334,7 @@ export const objToArr = (objArr, field) => {
 
 
 
-### 树结构 根据id获取name
+### <span id="head11">树结构 根据id获取name</span>
 
 ```js
 let objArr = [{"child":[{"child":[{"id":80,"name":"三级分类"}],"id":12,"name":"二级分类"}],"id":13,"name":"一级分类"},{"child":[{"child":[{"child":[{"id":72,"name":"奶茶分类"}],"id":24,"name":"咖啡分类"},{"id":2,"name":"甜品分类"}],"id":20,"name":"吃货分类"}],"id":4,"name":"甜点饮品"}]
@@ -294,7 +372,7 @@ let objArr = [{"child":[{"child":[{"id":80,"name":"三级分类"}],"id":12,"name
 
 
 
-### 字符串转对象
+### <span id="head12"> 字符串转对象</span>
 
 ```
   let Str = '规格A;规格B;规格C'
@@ -328,7 +406,7 @@ let objArr = [{"child":[{"child":[{"id":80,"name":"三级分类"}],"id":12,"name
 
 
 
-### 数组对象值转对象
+### <span id="head13"> 数组对象值转对象</span>
 
 ```js
 let arr = [{"id":0,"status":"a"},{"id":155,"status":"b"},{"id":283,"status":"c"},{"id":88,"status":"d"}]
@@ -357,7 +435,7 @@ arrOptionToObject(arr,'status','id')//{"a":0,"b":155,"c":283,"d":88}
 
 
 
-### 二维数组全排列组合转一维数组
+### <span id="head14"> 二维数组全排列组合转一维数组</span>
 
 ```js
   let arr2D = [["规格:大号-U"],["颜色:红色","颜色:黄色"]]
@@ -393,7 +471,7 @@ arrOptionToObject(arr,'status','id')//{"a":0,"b":155,"c":283,"d":88}
 
 
 
-### 数组|对象深拷贝
+### <span id="head15"> 数组|对象深拷贝</span>
 
 ```js
 /**
@@ -419,7 +497,7 @@ export function deepClone(source) {
 
 
 
-### 数组对象去重
+### <span id="head16"> 数组对象去重</span>
 
 ```js
 /*数组对象去重*/
@@ -433,7 +511,7 @@ uniqueObjArr(arr,Field) {
 
 
 
-### 替换指定位置的字符串
+### <span id="head17"> 替换指定位置的字符串</span>
 
 ```js
 let str = '1300011'
@@ -457,11 +535,11 @@ changeStr(str,str.length-2,'00') //1300000  把字符串后两位替换掉
 
 
 
-### 数量排序
+### <span id="head18"> 数量排序</span>
 
 
 
-### 函数节流
+### <span id="head19"> 函数节流</span>
 
 ```js
    demoFun:throttle(function (e) {
@@ -494,7 +572,7 @@ export const  throttle = function (fn, interval) {
 
 
 
-### 函数防抖
+### <span id="head20"> 函数防抖</span>
 
 ```js
 gotoUnlock: debounce(function() {
@@ -527,7 +605,7 @@ export const  debounce = function debounce(fn, interval) {
 
 
 
-### 对象字符串的值转字符串
+### <span id="head21"> 对象字符串的值转字符串</span>
 
 ```js
 ObjStringDeal('{"颜色":"红色","规格":"大号-U"}') //红色,大号-U
@@ -558,7 +636,7 @@ ObjStringDeal('{"颜色":"红色","规格":"大号-U"}') //红色,大号-U
 
 
 
-### 去掉字符串最后的逗号
+### <span id="head22"> 去掉字符串最后的逗号</span>
 
 ```js
 strRemoveDot('abcd,') //abcd
@@ -579,9 +657,9 @@ strRemoveDot('abcd,') //abcd
 
 
 
-## 校验类
+## <span id="head23"> 校验类</span>
 
-### 判断对象指定属性是否存在
+### <span id="head24"> 判断对象指定属性是否存在</span>
 
 ```js
 let obj = {"id":1,"name":"1"};
@@ -616,7 +694,7 @@ hasProperty(obj,'ids') //false
 
 
 
-### 比较两个数据类型是否相同
+### <span id="head25"> 比较两个数据类型是否相同</span>
 
 ```js
 sameType(6,'aaa') //false
@@ -645,7 +723,7 @@ sameType(6,8) //true
 
 
 
-### 是否为空
+### <span id="head26"> 是否为空</span>
 
 ```js
 /**
@@ -668,7 +746,7 @@ export function isNull(val) {
 
 
 
-### 是否是字符串
+### <span id="head27"> 是否是字符串</span>
 
 ```js
 /**
@@ -683,7 +761,7 @@ export function isString(str) {
 
 
 
-### 是否是数组
+### <span id="head28"> 是否是数组</span>
 
 ```js
 /**
@@ -702,7 +780,7 @@ export function isArray(arg) {
 
 
 
-### 是否是对象
+### <span id="head29"> 是否是对象</span>
 
 ```js
 /**
@@ -717,7 +795,7 @@ export function isObject(input) {
 
 
 
-### 是否是时间类型
+### <span id="head30"> 是否是时间类型</span>
 
 ```js
 /**
@@ -732,7 +810,7 @@ export function isDate(input) {
 
 
 
-### 是否是数字
+### <span id="head31"> 是否是数字</span>
 
 ```js
 /**
@@ -747,7 +825,7 @@ export function isNumber(input) {
 
 
 
-### 是否是布尔值
+### <span id="head32"> 是否是布尔值</span>
 
 ```js
 /**
@@ -762,7 +840,7 @@ export function isBoolean(input) {
 
 
 
-### 是否是方法
+### <span id="head33"> 是否是方法</span>
 
 ```js
 /**
@@ -777,7 +855,7 @@ export function isFunction(input) {
 
 
 
-### 邮箱校验
+### <span id="head34"> 邮箱校验</span>
 
 ```js
 /**
@@ -793,7 +871,7 @@ export function validEmail(email) {
 
 
 
-### 手机号校验
+### <span id="head35"> 手机号校验</span>
 
 ```js
 /**
@@ -809,7 +887,7 @@ export function isMobileNo (str) {
 
 
 
-### 校验字符串是否是url
+### <span id="head36"> 校验字符串是否是url</span>
 
 ```js
 /**
@@ -825,7 +903,7 @@ function isUrl (str) {
 
 
 
-### 检验输入框大于等于0
+### <span id="head37"> 检验输入框大于等于0</span>
 
 ```js
 /*
@@ -849,9 +927,9 @@ export const checkInput = (val, flag) => {
 
 
 
-## 工具类
+## <span id="head38"> 工具类</span>
 
-### PC端判断
+### <span id="head39"> PC端判断</span>
 
 ```js
 if (isPc) alert('这是PC端');
@@ -878,7 +956,7 @@ export function isPc() {
 
 
 
-### 数字格式化（给数字加逗号）
+### <span id="head40"> 数字格式化（给数字加逗号）</span>
 
 ```js
 formatDecimal(12000000.11) //12,000,000.11
@@ -906,7 +984,7 @@ formatDecimal(12000000.11,false) //12,000,000
 
 
 
-### downFile文件下载
+### <span id="head41"> downFile文件下载</span>
 
 别名：前端下载图片
 
@@ -964,7 +1042,7 @@ downLoadImgByUrl(data)
 }
 ```
 
-### 生成随机数
+### <span id="head42"> 生成随机数</span>
 
 ```js
 randomString(5) // ZsAl6
@@ -988,7 +1066,7 @@ export const randomString = (len) => {
     }
 ```
 
-### 复制
+### <span id="head43"> 复制</span>
 
 ```js
 copyToClip('复制文本')
@@ -1015,7 +1093,7 @@ export function copyToClip(content, info) {
 }
 ```
 
-### loadScript
+### <span id="head44"> loadScript</span>
 
 别名：加载脚本、加载js、加载css、加载资源
 
@@ -1065,7 +1143,7 @@ export function loadScript(type = 'js', url) {
 };
 ```
 
-### 历史记录
+### <span id="head45"> 历史记录</span>
 
 别名：搜索历史、最近浏览
 
@@ -1104,7 +1182,7 @@ export function setHistoryList(item) {
 }
 ```
 
-### 防抖
+### <span id="head46"> 防抖</span>
 
 ```js
 methods: {
@@ -1158,7 +1236,7 @@ export function debounce(func, wait, immediate) {
 }
 ```
 
-### 获取地址栏参数
+### <span id="head47"> 获取地址栏参数</span>
 
 别名：获取问号后面的参数
 
@@ -1189,7 +1267,7 @@ export function getQueryObject(url) {
 }
 ```
 
-### base64转换为文件
+### <span id="head48"> base64转换为文件</span>
 
 ```js
 /**
@@ -1211,7 +1289,7 @@ export function dataURLtoFile(url, filename) {
 }
 ```
 
-### 图片转换为base64
+### <span id="head49"> 图片转换为base64</span>
 
 ```js
 /**
@@ -1237,7 +1315,7 @@ export function getImgToBase64(url, callback, outputFormat) {
 }
 ```
 
-### uuid生成唯一值
+### <span id="head50"> uuid生成唯一值</span>
 
 ```js
 console.log(uuid()) // dec79cc2-ecf7-ec28-4b34-678b60ab37da
@@ -1258,7 +1336,7 @@ export function uuid() {
 
 
 
-### 生成一个hash字符串
+### <span id="head51"> 生成一个hash字符串</span>
 
 ```js
 getHash(6) //8cQQ80
@@ -1285,7 +1363,7 @@ getHash(12) //5Ia85xP0b4E6
 
 
 
-### 生成随机字符串
+### <span id="head52"> 生成随机字符串</span>
 
 ```js
 console.log(createUniqueString()) // njb9967469s0
@@ -1309,7 +1387,7 @@ console.log(createUniqueString()) // njb9967469s0
 
 
 
-### 大小写转换或首字母
+### <span id="head53"> 大小写转换或首字母</span>
 
 ```js
 changeBigSmallCase('Hello', 5); // hello 
@@ -1351,7 +1429,7 @@ export function changeBigSmallCase(str, type) {
 }
 ```
 
-### 将阿拉伯数字翻译成中文的大写数字
+### <span id="head54"> 将阿拉伯数字翻译成中文的大写数字</span>
 
 ```js
 numberToChinese('10') // 十
@@ -1406,7 +1484,7 @@ export function numberToChinese(num) {
 }
 ```
 
-### 将数字转换为大写金额
+### <span id="head55"> 将数字转换为大写金额</span>
 
 ```js
 console.log(changeToChinese('1000')) // 壹仟元整
@@ -1571,7 +1649,7 @@ export function changeToChinese(Num) {
 }
 ```
 
-### 富文本代码块右上角显示复制按钮
+### <span id="head56"> 富文本代码块右上角显示复制按钮</span>
 
 ```js
 onMounted(() => {
@@ -1616,7 +1694,7 @@ function codeCopy() {
 export default codeCopy;
 ```
 
-### 图片懒加载
+### <span id="head57"> 图片懒加载</span>
 
 ```js
 import lazyLoad from "@/plugins/lazy-load-img"
@@ -1673,7 +1751,7 @@ export default lazyLoad
 
 
 
-### 计算字符串长度（中英文）
+### <span id="head58"> 计算字符串长度（中英文）</span>
 
 ```js
 /*
@@ -1697,7 +1775,7 @@ export const strlen  = (str)  => {
 
 
 
-### 判断链接是否为本地
+### <span id="head59"> 判断链接是否为本地</span>
 
 ```js
 export const isLocal = () => {
@@ -1709,7 +1787,7 @@ export const isLocal = () => {
 
 
 
-###  获取当前url上的参数
+### <span id="head60"> 获取当前url上的参数</span>
 
 ```js
 /**
@@ -1735,7 +1813,7 @@ export const getRequest = () => {
 
 
 
-### 处理二进制流文件
+### <span id="head61"> 处理二进制流文件</span>
 
 ````js
   /**
@@ -1798,9 +1876,9 @@ export const getRequest = () => {
 
 
 
-## 时间类
+## <span id="head62"> 时间类</span>
 
-### 获取当前周几
+### <span id="head63"> 获取当前周几</span>
 
 别名：今天星期几
 
@@ -1824,7 +1902,7 @@ export const getDayText = (date = new Date()) => {
     };
 ```
 
-### 时间问候语
+### <span id="head64"> 时间问候语</span>
 
 别名：good morning
 
@@ -1840,7 +1918,7 @@ export const greetTime = () => {
     }
 ```
 
-### Date时间转数字
+### <span id="head65"> Date时间转数字</span>
 
 别名：时间转数字格式、时间戳
 
@@ -1900,7 +1978,7 @@ export function parseTime(time, cFormat) {
 }
 ```
 
-### Date时间转汉字
+### <span id="head66"> Date时间转汉字</span>
 
 别名：时间转汉字、时间戳
 
@@ -1955,7 +2033,7 @@ export function formatTime(time, option) {
 }
 ```
 
-### 获取某月有多少天
+### <span id="head67"> 获取某月有多少天</span>
 
 ```js
 console.log(getMonthOfDay('2021-2')) // 28
@@ -1989,7 +2067,7 @@ export function getMonthOfDay(time) {
 }
 ```
 
-### 获取某年的第一天
+### <span id="head68"> 获取某年的第一天</span>
 
 ```js
 console.log(getFirstDayOfYear('2021')) // 2021-01-01 00:00:00
@@ -2007,7 +2085,7 @@ export function getFirstDayOfYear(time) {
 }
 ```
 
-### 获取某年最后一天
+### <span id="head69"> 获取某年最后一天</span>
 
 ```js
 console.log(getLastDayOfYear('2021')) // 2021-12-31 23:59:59
@@ -2028,7 +2106,7 @@ export function getLastDayOfYear(time) {
 }
 ```
 
-### 获取某个日期是当年中的第几天
+### <span id="head70"> 获取某个日期是当年中的第几天</span>
 
 ```js
 console.log(getDayOfYear('2021-12-13')) // 347
@@ -2048,7 +2126,7 @@ export function getDayOfYear(time) {
 }
 ```
 
-### 获取某个日期在这一年的第几周
+### <span id="head71"> 获取某个日期在这一年的第几周</span>
 
 ```js
 console.log(getDayOfYearWeek('2021-12-31')) // 53
@@ -2067,7 +2145,7 @@ export function getDayOfYearWeek(time) {
 }
 ```
 
-### 把秒转化为天小时分钟秒
+### <span id="head72"> 把秒转化为天小时分钟秒</span>
 
 ```js
 sToHs(60) // 1分钟0秒
@@ -2100,9 +2178,9 @@ export function sToHs(seconds){
 ```
 
 
-## DOM类
+## <span id="head73"> DOM类</span>
 
-### 获取元素
+### <span id="head74"> 获取元素</span>
 
 ```js
 export function $(selector) {
@@ -2119,7 +2197,7 @@ export function $(selector) {
 }
 ```
 
-### 跳转到某个元素
+### <span id="head75"> 跳转到某个元素</span>
 
 别名：滚动到某个div
 
@@ -2152,7 +2230,7 @@ export function goToDom(toEl, n) {
 }
 ```
 
-### 切换元素
+### <span id="head76"> 切换元素</span>
 
 别名：切换class
 
@@ -2186,7 +2264,7 @@ export function toggleClass(element, className) {
 }
 ```
 
-### 获取兄弟节点
+### <span id="head77"> 获取兄弟节点</span>
 
 ```js
 /**
@@ -2205,7 +2283,7 @@ export function siblings(ele) {
 }
 ```
 
-### 判断是否存在Class
+### <span id="head78"> 判断是否存在Class</span>
 
 别名：class是否存在
 
@@ -2221,7 +2299,7 @@ export function hasClass(ele, cls) {
 }
 ```
 
-### 添加Class
+### <span id="head79"> 添加Class</span>
 
 ```js
 /**
@@ -2234,7 +2312,7 @@ export function addClass(ele, cls) {
 }
 ```
 
-### 删除Class
+### <span id="head80"> 删除Class</span>
 
 ```js
 /**
@@ -2250,7 +2328,7 @@ export function removeClass(ele, cls) {
 }
 ```
 
-### 创建a标签打开新页面
+### <span id="head81"> 创建a标签打开新页面</span>
 
 别名：window.open被浏览器拦截
 
